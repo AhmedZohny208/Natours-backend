@@ -8,6 +8,8 @@ const POLICY = "default-src 'self' https://*.mapbox.com https://js.stripe.com/ w
 
 const router = express.Router()
 
+router.use(viewsController.alerts)
+
 router.use((req, res, next) => {
   res.setHeader(CSP, POLICY);
   next();
