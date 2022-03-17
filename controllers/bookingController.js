@@ -27,7 +27,8 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
         currency: 'usd',
         quantity: 1
       }
-    ]
+    ],
+    expand: ['line_items']
   })
 
   // 3) Create session as a response
